@@ -1,0 +1,238 @@
+=========================================================================
+                CampusConnect DBMS Engine Verification System
+=========================================================================
+
+-------------------------------------------------------------------------
+Query #1: INNER JOIN - Fetch Student details with Department names
+-------------------------------------------------------------------------
+              student_id              |    roll_no    | first_name | last_name |              department_name              
+--------------------------------------+---------------+------------+-----------+-------------------------------------------
+ 9a92c555-a7f8-4ca0-8d36-1c9c816abfc6 | ROLL2023-1000 | James      | Smith     | Computer Science and Engineering
+ 49a222d2-bd29-426d-91da-383436a2366c | ROLL2023-1001 | Mary       | Johnson   | Electronics and Communication Engineering
+ a0548f35-0c32-4098-bd36-df832f3158f8 | ROLL2023-1002 | John       | Williams  | Mechanical Engineering
+ fe14b1e3-272f-40d9-a09a-4d9ffa135e3f | ROLL2023-1003 | Patricia   | Brown     | Science and Humanities
+ 9f815862-945d-4250-87c1-1fba5f2880b9 | ROLL2023-1004 | Robert     | Jones     | Computer Science and Engineering
+(5 rows)
+
+
+-------------------------------------------------------------------------
+Query #2: LEFT JOIN - List courses and their assigned faculty (including unassigned)
+-------------------------------------------------------------------------
+ code  |              title               |  faculty_name   
+-------+----------------------------------+-----------------
+ CS101 | Introduction to Computer Science | Alan Turing
+ CS302 | Database Management Systems      | Grace Hopper
+ CS401 | Artificial Intelligence          | Alan Turing
+ EC201 | Digital Electronics              | Ada Lovelace
+ EC302 | Signals and Systems              | Ada Lovelace
+ MA201 | Discrete Mathematics             | Albert Einstein
+ ME101 | Engineering Mechanics            | Nikola Tesla
+ ME204 | Thermodynamics                   | Nikola Tesla
+(8 rows)
+
+
+-------------------------------------------------------------------------
+Query #3: RIGHT JOIN - Recruiter and company associations, tracking companies without active recruiters
+-------------------------------------------------------------------------
+ company_name | recruiter_name |        designation         
+--------------+----------------+----------------------------
+ Google       | John           | Talent Acquisition Manager
+ Microsoft    | John           | Talent Acquisition Manager
+ Tesla        | John           | Talent Acquisition Manager
+(3 rows)
+
+
+-------------------------------------------------------------------------
+Query #4: GROUP BY + HAVING - Courses with average attendance above 80% and at least 3 students
+-------------------------------------------------------------------------
+ code  |              title               | student_count | avg_attendance 
+-------+----------------------------------+---------------+----------------
+ ME204 | Thermodynamics                   |             7 |          80.95
+ MA201 | Discrete Mathematics             |             7 |          90.48
+ ME101 | Engineering Mechanics            |             7 |          85.71
+ EC201 | Digital Electronics              |             8 |          91.67
+ CS401 | Artificial Intelligence          |             8 |          95.83
+ CS101 | Introduction to Computer Science |            30 |          85.56
+ CS302 | Database Management Systems      |             8 |         100.00
+(7 rows)
+
+
+-------------------------------------------------------------------------
+Query #5: SCALAR SUBQUERY - Retrieve details of student with the highest GPA
+-------------------------------------------------------------------------
+                  id                  |    rollNo     | firstName | lastName | cgpa 
+--------------------------------------+---------------+-----------+----------+------
+ 24944819-690b-455f-b8e5-9ad6ce23a9d7 | ROLL2023-1022 | Daniel    | Gonzalez | 9.78
+(1 row)
+
+
+-------------------------------------------------------------------------
+Query #6: CORRELATED SUBQUERY - Students scoring above average GPA in their respective department
+-------------------------------------------------------------------------
+                  id                  |    rollNo     | first_name  | dept_code | cgpa 
+--------------------------------------+---------------+-------------+-----------+------
+ 5e755fc8-eb0e-4230-bdfd-c920e0cb18f3 | ROLL2023-1012 | Richard     | CSE       | 9.73
+ 3a522b5e-bb8f-4b23-bee2-a9b75a514cdc | ROLL2023-1020 | Christopher | CSE       | 8.77
+ 0ea4e317-0e69-455c-bad2-761c7ad3ac36 | ROLL2023-1025 | Betty       | ECE       | 9.71
+ 94a583d9-c3c8-4999-810b-7e5bdfdc641d | ROLL2023-1009 | Elizabeth   | ECE       | 9.48
+ 5c8d1438-ce68-4f7c-bb44-c23a0eff3245 | ROLL2023-1005 | Jennifer    | ECE       | 9.29
+(5 rows)
+
+
+-------------------------------------------------------------------------
+Query #7: NESTED QUERY - List clubs with active memberships exceeding the average club size
+-------------------------------------------------------------------------
+        name        | member_count 
+--------------------+--------------
+ Campus Coding Club |           11
+(1 row)
+
+
+-------------------------------------------------------------------------
+Query #8: WINDOW FUNCTION (RANK) - Rank students by CGPA within their departments
+-------------------------------------------------------------------------
+    rollNo     | firstName | lastName | dept_code | cgpa | cgpa_rank 
+---------------+-----------+----------+-----------+------+-----------
+ ROLL2023-1007 | Linda     | Garcia   | S&H       | 9.01 |         1
+ ROLL2023-1027 | Margaret  | Walker   | S&H       |    9 |         2
+ ROLL2023-1003 | Patricia  | Brown    | S&H       | 8.42 |         3
+ ROLL2023-1015 | Jessica   | Moore    | S&H       | 7.85 |         4
+ ROLL2023-1011 | Barbara   | Anderson | S&H       | 7.39 |         5
+ ROLL2023-1019 | Karen     | White    | S&H       | 7.32 |         6
+ ROLL2023-1023 | Lisa      | Harris   | S&H       |    7 |         7
+ ROLL2023-1022 | Daniel    | Gonzalez | ME        | 9.78 |         1
+(8 rows)
+
+
+-------------------------------------------------------------------------
+Query #9: WINDOW FUNCTION (LAG) - Time gaps between consecutive assignments in a course
+-------------------------------------------------------------------------
+ course_code |      assignment_title       |  dueDate   | prev_due_date | days_between 
+-------------+-----------------------------+------------+---------------+--------------
+ CS101       | Midterm Homework Assignment | 2026-07-20 |               |             
+ CS101       | Practical Project Milestone | 2026-07-30 | 2026-07-20    |           10
+ CS302       | Midterm Homework Assignment | 2026-07-20 |               |             
+ CS302       | Practical Project Milestone | 2026-07-30 | 2026-07-20    |           10
+ CS401       | Midterm Homework Assignment | 2026-07-20 |               |             
+ CS401       | Practical Project Milestone | 2026-07-30 | 2026-07-20    |           10
+ EC201       | Midterm Homework Assignment | 2026-07-20 |               |             
+ EC201       | Practical Project Milestone | 2026-07-30 | 2026-07-20    |           10
+(8 rows)
+
+
+-------------------------------------------------------------------------
+Query #10: WINDOW FUNCTION - Running sum of registrations over time for a popular event
+-------------------------------------------------------------------------
+        event_title         | registrationDate |           email            | cumulative_registrations 
+----------------------------+------------------+----------------------------+--------------------------
+ Flutter Developer Workshop | 2026-07-11       | student1@campusconnect.edu |                        1
+ Flutter Developer Workshop | 2026-07-11       | student2@campusconnect.edu |                        6
+ Flutter Developer Workshop | 2026-07-11       | student3@campusconnect.edu |                        6
+ Flutter Developer Workshop | 2026-07-11       | student4@campusconnect.edu |                        6
+ Flutter Developer Workshop | 2026-07-11       | student5@campusconnect.edu |                        6
+ Flutter Developer Workshop | 2026-07-11       | student6@campusconnect.edu |                        6
+ Flutter Developer Workshop | 2026-07-11       | student7@campusconnect.edu |                       12
+ Flutter Developer Workshop | 2026-07-11       | student8@campusconnect.edu |                       12
+(8 rows)
+
+
+-------------------------------------------------------------------------
+Query #11: VIEW - Query StudentPerformanceView for critical low attendance (below 85%)
+-------------------------------------------------------------------------
+              student_id              |    roll_no    | first_name  | last_name | attendance | total_courses_enrolled 
+--------------------------------------+---------------+-------------+-----------+------------+------------------------
+ 0ea4e317-0e69-455c-bad2-761c7ad3ac36 | ROLL2023-1025 | Betty       | Lewis     |      66.67 |                      3
+ 3a522b5e-bb8f-4b23-bee2-a9b75a514cdc | ROLL2023-1020 | Christopher | Lopez     |      77.78 |                      3
+ 49a222d2-bd29-426d-91da-383436a2366c | ROLL2023-1001 | Mary        | Johnson   |      66.67 |                      3
+ 8f33e380-9bf7-48c1-8c73-5c95885228ab | ROLL2023-1015 | Jessica     | Moore     |      83.33 |                      2
+ 9133452f-9efd-431a-a391-ed3e3f0d986e | ROLL2023-1016 | Thomas      | Martin    |      77.78 |                      3
+(5 rows)
+
+
+-------------------------------------------------------------------------
+Query #12: VIEW - Query CourseAnalyticsView to analyze courses performance
+-------------------------------------------------------------------------
+ course_code |           course_title           | total_enrolled_students | avg_attendance | avg_marks 
+-------------+----------------------------------+-------------------------+----------------+-----------
+ EC302       | Signals and Systems              |                       8 |          79.17 |     58.20
+ ME204       | Thermodynamics                   |                       7 |          80.95 |     71.33
+ CS101       | Introduction to Computer Science |                      30 |          85.56 |     57.62
+ ME101       | Engineering Mechanics            |                       7 |          85.71 |     59.93
+ MA201       | Discrete Mathematics             |                       7 |          90.48 |     58.33
+ EC201       | Digital Electronics              |                       8 |          91.67 |     52.14
+ CS401       | Artificial Intelligence          |                       8 |          95.83 |     59.44
+ CS302       | Database Management Systems      |                       8 |         100.00 |     60.44
+(8 rows)
+
+
+-------------------------------------------------------------------------
+Query #13: VIEW - Query PlacementStatisticsView to analyze industry success rates
+-------------------------------------------------------------------------
+ company_name |      industry       | total_internships_posted | total_applications_received | selection_rate_percentage | average_stipend 
+--------------+---------------------+--------------------------+-----------------------------+---------------------------+-----------------
+ Tesla        | Automotive & Energy |                        1 |                           3 |                     33.33 |          120000
+ Google       | Technology          |                        2 |                           8 |                     25.00 |           72500
+ Microsoft    | Technology          |                        1 |                           4 |                      0.00 |           75000
+(3 rows)
+
+
+-------------------------------------------------------------------------
+Query #14: COMPLEX SUMMARY - Get full statistics of departments
+-------------------------------------------------------------------------
+                 dept_name                 | dept_code | student_count | faculty_count | course_count 
+-------------------------------------------+-----------+---------------+---------------+--------------
+ Computer Science and Engineering          | CSE       |             8 |             2 |            3
+ Electronics and Communication Engineering | ECE       |             8 |             1 |            2
+ Mechanical Engineering                    | ME        |             7 |             1 |            2
+ Science and Humanities                    | S&H       |             7 |             1 |            1
+(4 rows)
+
+
+-------------------------------------------------------------------------
+Query #15: PI-VOT FUNNEL - Count applications per internship by recruiting stage
+-------------------------------------------------------------------------
+         internship_title          | company_name | total_applications | status_applied | status_screening | status_interview | status_offered | status_rejected 
+-----------------------------------+--------------+--------------------+----------------+------------------+------------------+----------------+-----------------
+ Azure Cloud Consultant Intern     | Microsoft    |                  4 |              1 |                1 |                1 |              0 |               1
+ UI/UX Design Intern               | Google       |                  4 |              1 |                1 |                0 |              1 |               1
+ Software Engineering Intern       | Google       |                  4 |              1 |                0 |                1 |              1 |               1
+ Embedded Systems Developer Intern | Tesla        |                  3 |              0 |                1 |                1 |              1 |               0
+(4 rows)
+
+
+=========================================================================
+                TESTING ADVANCED TRANSACTIONAL STORED PROCEDURES
+=========================================================================
+
+Testing GenerateStudentReport stored function for Student James Smith...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           generatestudentreport                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ {"profile" : {"student_id" : "9a92c555-a7f8-4ca0-8d36-1c9c816abfc6", "roll_no" : "ROLL2023-1000", "name" : "James Smith", "email" : "student1@campusconnect.edu", "department" : "Computer Science and Engineering", "batch" : "2023-2027", "cgpa" : 7.27}, "academics" : [{"course_code" : "CS101", "course_title" : "Introduction to Computer Science", "semester" : "Fall 2026", "grade" : "Ongoing", "attendance_rate" : 100, "submissions_count" : 2}, {"course_code" : "CS302", "course_title" : "Database Management Systems", "semester" : "Fall 2026", "grade" : "B+", "attendance_rate" : 100, "submissions_count" : 2}, {"course_code" : "CS401", "course_title" : "Artificial Intelligence", "semester" : "Fall 2026", "grade" : "Ongoing", "attendance_rate" : 100, "submissions_count" : 2}], "extracurricular" : [{"club_name" : "Campus Coding Club", "role" : "SECRETARY", "joined_on" : "2026-07-11T21:40:27.858"}, {"club_name" : "Google Developer Group Campus", "role" : "COORDINATOR", "joined_on" : "2026-07-11T21:40:27.861"}, {"club_name" : "Rhythm Cultural Club", "role" : "COORDINATOR", "joined_on" : "2026-07-11T21:40:27.864"}], "placements" : [{"job_title" : "Software Engineering Intern", "company" : "Google", "stipend" : 80000, "status" : "APPLIED", "applied_on" : "2026-07-11T21:40:27.88"}]}
+(1 row)
+
+Testing RegisterForEvent transactional stored function...
+           registerforevent           
+--------------------------------------
+ 80596a13-780c-4743-b5bf-80b245a3d0b1
+(1 row)
+
+Testing Application trigger and ApplicationStatusHistory insertion...
+Changing application status of student...
+UPDATE 1
+Verifying ApplicationStatusHistory trigger updates...
+                  id                  |            applicationId             |  status   | changedById |        changedAt        
+--------------------------------------+--------------------------------------+-----------+-------------+-------------------------
+ ea34afbe-b5d9-4ee7-be2d-ef35af7a43a6 | d40f0fec-89a5-4550-83c2-3f2a796fde20 | APPLIED   |             | 2026-07-12 03:10:27.88
+ d903a220-7b69-4af3-8060-73f883ff34be | d40f0fec-89a5-4550-83c2-3f2a796fde20 | INTERVIEW |             | 2026-07-12 03:10:30.348
+(2 rows)
+
+Verifying placement notifications trigger updates...
+             title             |                                           message                                           |   type    
+-------------------------------+---------------------------------------------------------------------------------------------+-----------
+ Internship Application Update | Your application for "Software Engineering Intern" at Google has been updated to: INTERVIEW | PLACEMENT
+(1 row)
+
+
+=========================================================================
+               CampusConnect Verification Completed Successfully
+=========================================================================
