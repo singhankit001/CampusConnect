@@ -6,3 +6,4 @@
 - feat(db): implement advanced SQL views for performance tracking
 - fix(db): correct schema cascade delete rules
 - chore(db): add robust database seed scripts for mock generation
+- refactor(db): optimize indexes on Enrollment table
