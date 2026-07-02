@@ -158,7 +158,7 @@ runCmd('git config user.email "dev@campusconnect.local"');
 const startDate = new Date('2026-07-02T10:00:00+05:30');
 
 // Create the DEV_LOG.md file
-fs.writeFileSync(logFile, '# Development Log\\n\\n');
+fs.writeFileSync(logFile, '# Development Log\n\n');
 
 // 2. Make the initial commit with all current files
 console.log("Making initial commit...");
@@ -176,7 +176,7 @@ for (let i = 0; i < commitMessages.length; i++) {
   hoursOffset += (24 * 12) / commitMessages.length; // roughly 2.23 hours per commit
   
   // Add a line to DEV_LOG.md
-  fs.appendFileSync(logFile, '- ' + msg + '\\n');
+  fs.appendFileSync(logFile, '- ' + msg + '\n');
   
   // Commit
   runCmd('git add DEV_LOG.md');
