@@ -1,1 +1,1 @@
-# Development Log\n\n- feat(api): design core normalized database schema for academic entities\n
+# Development Log\n\n- feat(api): design core normalized database schema for academic entities\n- chore(db): configure Prisma with PostgreSQL provider\n
