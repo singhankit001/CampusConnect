@@ -1,1 +1,1 @@
-# Development Log\n\n- feat(api): design core normalized database schema for academic entities\n- chore(db): configure Prisma with PostgreSQL provider\n
+# Development Log\n\n- feat(api): design core normalized database schema for academic entities\n- chore(db): configure Prisma with PostgreSQL provider\n- chore: setup project eslint and prettier configurations\n
