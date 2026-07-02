@@ -1,1 +1,1 @@
-# Development Log\n\n
+# Development Log\n\n- feat(api): design core normalized database schema for academic entities\n
