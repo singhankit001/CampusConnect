@@ -13,3 +13,4 @@
 - feat(auth): configure Role-Based Access Control (RBAC) middleware
 - refactor(auth): separate token generation into utility service
 - feat(api): build basic CRUD for Student entity
+- feat(api): build basic CRUD for Faculty entity
