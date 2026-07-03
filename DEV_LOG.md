@@ -11,3 +11,4 @@
 - feat(auth): add bcrypt password hashing to user model
 - fix(auth): handle expired token edge cases
 - feat(auth): configure Role-Based Access Control (RBAC) middleware
+- refactor(auth): separate token generation into utility service
