@@ -16,3 +16,4 @@
 - feat(api): build basic CRUD for Faculty entity
 - feat(api): build basic CRUD for Course entity
 - fix(api): resolve pagination offset bugs in Student fetch
+- feat(api): add searching and filtering to Courses API
