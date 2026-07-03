@@ -9,3 +9,4 @@
 - refactor(db): optimize indexes on Enrollment table
 - feat(auth): implement JWT-based authentication
 - feat(auth): add bcrypt password hashing to user model
+- fix(auth): handle expired token edge cases
