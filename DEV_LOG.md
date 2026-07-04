@@ -25,3 +25,4 @@
 - feat(ui): integrate Tailwind CSS into Vite build pipeline
 - chore(ui): configure custom Tailwind theme and colors
 - feat(ui): create base Card component with glassmorphism utilities
+- feat(ui): implement responsive Sidebar navigation
