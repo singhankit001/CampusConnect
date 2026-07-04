@@ -24,3 +24,4 @@
 - fix(api): resolve division by zero in attendance calculation view
 - feat(ui): integrate Tailwind CSS into Vite build pipeline
 - chore(ui): configure custom Tailwind theme and colors
+- feat(ui): create base Card component with glassmorphism utilities
