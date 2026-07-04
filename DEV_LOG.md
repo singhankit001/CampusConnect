@@ -22,3 +22,4 @@
 - feat(api): develop specialized analytics endpoints for recruiter dashboard
 - refactor(api): optimize raw SQL queries in analytics endpoints
 - fix(api): resolve division by zero in attendance calculation view
+- feat(ui): integrate Tailwind CSS into Vite build pipeline
