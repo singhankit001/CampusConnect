@@ -19,3 +19,4 @@
 - feat(api): add searching and filtering to Courses API
 - feat(api): develop specialized analytics endpoints for student dashboard
 - feat(api): develop specialized analytics endpoints for faculty dashboard
+- feat(api): develop specialized analytics endpoints for recruiter dashboard
