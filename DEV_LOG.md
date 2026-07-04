@@ -26,3 +26,4 @@
 - chore(ui): configure custom Tailwind theme and colors
 - feat(ui): create base Card component with glassmorphism utilities
 - feat(ui): implement responsive Sidebar navigation
+- feat(ui): implement top Navbar with user profile dropdown
