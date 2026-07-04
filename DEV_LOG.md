@@ -23,3 +23,4 @@
 - refactor(api): optimize raw SQL queries in analytics endpoints
 - fix(api): resolve division by zero in attendance calculation view
 - feat(ui): integrate Tailwind CSS into Vite build pipeline
+- chore(ui): configure custom Tailwind theme and colors
