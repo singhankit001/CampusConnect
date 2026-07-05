@@ -32,3 +32,4 @@
 - feat(ui): implement Student dashboard overview cards
 - feat(ui): implement Faculty dashboard overview cards
 - feat(ui): implement Recruiter dashboard overview cards
+- feat(ui): integrate Recharts for interactive data visualization
