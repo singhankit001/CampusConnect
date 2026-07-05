@@ -33,3 +33,4 @@
 - feat(ui): implement Faculty dashboard overview cards
 - feat(ui): implement Recruiter dashboard overview cards
 - feat(ui): integrate Recharts for interactive data visualization
+- feat(ui): build CGPA trend line chart
