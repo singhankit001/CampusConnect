@@ -36,3 +36,4 @@
 - feat(ui): build CGPA trend line chart
 - feat(ui): build placement application funnel chart
 - fix(ui): correct Recharts tooltip background in dark mode
+- feat(ui): integrate Lucide icons for modern aesthetics
