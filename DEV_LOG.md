@@ -28,3 +28,4 @@
 - feat(ui): implement responsive Sidebar navigation
 - feat(ui): implement top Navbar with user profile dropdown
 - fix(ui): correct z-index overlapping on mobile sidebar
+- feat(ui): design premium glassmorphic dashboard layouts
