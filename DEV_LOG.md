@@ -31,3 +31,4 @@
 - feat(ui): design premium glassmorphic dashboard layouts
 - feat(ui): implement Student dashboard overview cards
 - feat(ui): implement Faculty dashboard overview cards
+- feat(ui): implement Recruiter dashboard overview cards
