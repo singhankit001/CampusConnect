@@ -46,3 +46,4 @@
 - feat(api): create internship posting endpoint
 - feat(api): create student application endpoint
 - fix(api): prevent duplicate internship applications
+- feat(api): add application status update endpoint
