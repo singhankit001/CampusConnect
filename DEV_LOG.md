@@ -48,3 +48,4 @@
 - fix(api): prevent duplicate internship applications
 - feat(api): add application status update endpoint
 - feat(ui): build internship board view for students
+- feat(ui): build candidate review view for recruiters
