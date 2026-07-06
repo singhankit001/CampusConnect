@@ -43,3 +43,4 @@
 - style(ui): enforce fluid typography wrapping to prevent overflow
 - refactor(ui): extract reusable chart wrapper component
 - feat(db): implement database-level triggers for automated cascading
+- feat(api): create internship posting endpoint
