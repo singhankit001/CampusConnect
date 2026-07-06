@@ -42,3 +42,4 @@
 - style(ui): fix contrast issues in light mode
 - style(ui): enforce fluid typography wrapping to prevent overflow
 - refactor(ui): extract reusable chart wrapper component
+- feat(db): implement database-level triggers for automated cascading
