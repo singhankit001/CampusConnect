@@ -40,3 +40,4 @@
 - feat(ui): build custom cursor component
 - fix(ui): remove native cursor on interactive elements
 - style(ui): fix contrast issues in light mode
+- style(ui): enforce fluid typography wrapping to prevent overflow
