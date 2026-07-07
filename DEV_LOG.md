@@ -55,3 +55,4 @@
 - docs: inject complete Mermaid ER diagram into PROJECT_REPORT.md
 - chore: clean up console logs and unused imports
 - perf(api): add basic caching headers to static endpoints
+- test(auth): add unit tests for JWT verification
