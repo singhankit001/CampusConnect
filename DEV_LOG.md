@@ -52,3 +52,4 @@
 - refactor(api): split monolithic crud router into domain-specific modules
 - docs(db): generate DBMS deliverables including raw schema
 - docs(db): write explicit 5 mandatory DBMS SQL queries
+- docs: inject complete Mermaid ER diagram into PROJECT_REPORT.md
