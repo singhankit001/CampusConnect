@@ -53,3 +53,4 @@
 - docs(db): generate DBMS deliverables including raw schema
 - docs(db): write explicit 5 mandatory DBMS SQL queries
 - docs: inject complete Mermaid ER diagram into PROJECT_REPORT.md
+- chore: clean up console logs and unused imports
