@@ -56,3 +56,4 @@
 - chore: clean up console logs and unused imports
 - perf(api): add basic caching headers to static endpoints
 - test(auth): add unit tests for JWT verification
+- fix(ui): resolve hydration error on theme toggle
