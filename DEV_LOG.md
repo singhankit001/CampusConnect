@@ -57,3 +57,4 @@
 - perf(api): add basic caching headers to static endpoints
 - test(auth): add unit tests for JWT verification
 - fix(ui): resolve hydration error on theme toggle
+- feat(ui): add loading skeletons for dashboard widgets
