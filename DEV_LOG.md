@@ -49,3 +49,4 @@
 - feat(api): add application status update endpoint
 - feat(ui): build internship board view for students
 - feat(ui): build candidate review view for recruiters
+- refactor(api): split monolithic crud router into domain-specific modules
