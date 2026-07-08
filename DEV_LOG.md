@@ -67,3 +67,4 @@
 - docs: update API_DOCUMENTATION.md with new modular routes
 - feat(api): implement system notification generation
 - feat(ui): add real-time notification bell component
+- fix(ui): mark notifications as read correctly
