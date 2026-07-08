@@ -62,3 +62,4 @@
 - feat(api): implement event registration tracking
 - feat(api): build club management endpoints
 - feat(ui): build campus ecosystem discovery page
+- fix(api): correct timezone offset for event dates
