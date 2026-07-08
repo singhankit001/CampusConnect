@@ -63,3 +63,4 @@
 - feat(api): build club management endpoints
 - feat(ui): build campus ecosystem discovery page
 - fix(api): correct timezone offset for event dates
+- style(ui): polish glassmorphism border opacities
