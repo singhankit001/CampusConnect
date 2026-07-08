@@ -61,3 +61,4 @@
 - refactor(db): migrate enum definitions to dedicated file
 - feat(api): implement event registration tracking
 - feat(api): build club management endpoints
+- feat(ui): build campus ecosystem discovery page
