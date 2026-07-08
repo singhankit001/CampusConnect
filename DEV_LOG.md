@@ -60,3 +60,4 @@
 - feat(ui): add loading skeletons for dashboard widgets
 - refactor(db): migrate enum definitions to dedicated file
 - feat(api): implement event registration tracking
+- feat(api): build club management endpoints
