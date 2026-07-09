@@ -74,3 +74,4 @@
 - feat(ui): add assignment submission drag-and-drop zone
 - fix(ui): handle large file upload errors gracefully
 - docs: add VIVA_GUIDE.md for project defense
+- feat(api): implement admin activity logging
