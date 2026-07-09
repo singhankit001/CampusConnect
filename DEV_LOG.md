@@ -71,3 +71,4 @@
 - refactor(api): streamline error handling middleware
 - perf(db): implement connection pooling for Prisma
 - feat(api): build assignment submission upload handler
+- feat(ui): add assignment submission drag-and-drop zone
