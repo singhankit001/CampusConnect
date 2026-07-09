@@ -80,3 +80,4 @@
 - refactor(ui): use custom hooks for data fetching
 - chore: update dependencies to latest stable versions
 - fix(db): ensure unique constraints on composite keys
+- feat(api): add department statistics aggregation
