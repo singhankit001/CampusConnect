@@ -79,3 +79,4 @@
 - style(ui): improve table pagination accessibility
 - refactor(ui): use custom hooks for data fetching
 - chore: update dependencies to latest stable versions
+- fix(db): ensure unique constraints on composite keys
