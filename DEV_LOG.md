@@ -76,3 +76,4 @@
 - docs: add VIVA_GUIDE.md for project defense
 - feat(api): implement admin activity logging
 - feat(ui): build admin audit log viewer
+- style(ui): improve table pagination accessibility
