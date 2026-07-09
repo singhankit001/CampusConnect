@@ -77,3 +77,4 @@
 - feat(api): implement admin activity logging
 - feat(ui): build admin audit log viewer
 - style(ui): improve table pagination accessibility
+- refactor(ui): use custom hooks for data fetching
