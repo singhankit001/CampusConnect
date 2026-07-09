@@ -75,3 +75,4 @@
 - fix(ui): handle large file upload errors gracefully
 - docs: add VIVA_GUIDE.md for project defense
 - feat(api): implement admin activity logging
+- feat(ui): build admin audit log viewer
