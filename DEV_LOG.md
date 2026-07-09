@@ -78,3 +78,4 @@
 - feat(ui): build admin audit log viewer
 - style(ui): improve table pagination accessibility
 - refactor(ui): use custom hooks for data fetching
+- chore: update dependencies to latest stable versions
