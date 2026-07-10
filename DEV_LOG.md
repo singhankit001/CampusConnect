@@ -90,3 +90,4 @@
 - chore(db): expand mock seed data with realistic edge cases
 - feat(ui): implement dark mode persistent toggle
 - fix(ui): prevent flash of unstyled content on load
+- docs: refine README.md deployment instructions
