@@ -85,3 +85,4 @@
 - style(ui): adjust chart axis tick formatting
 - feat(api): implement bulk student enrollment endpoint
 - feat(ui): add CSV upload for mass enrollments
+- fix(api): validate CSV headers before processing
