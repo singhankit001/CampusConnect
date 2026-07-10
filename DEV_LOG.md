@@ -82,3 +82,4 @@
 - fix(db): ensure unique constraints on composite keys
 - feat(api): add department statistics aggregation
 - feat(ui): visualize department performance comparisons
+- style(ui): adjust chart axis tick formatting
