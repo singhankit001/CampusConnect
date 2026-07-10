@@ -81,3 +81,4 @@
 - chore: update dependencies to latest stable versions
 - fix(db): ensure unique constraints on composite keys
 - feat(api): add department statistics aggregation
+- feat(ui): visualize department performance comparisons
