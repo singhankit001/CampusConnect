@@ -86,3 +86,4 @@
 - feat(api): implement bulk student enrollment endpoint
 - feat(ui): add CSV upload for mass enrollments
 - fix(api): validate CSV headers before processing
+- refactor(api): extract CSV parsing to utility service
