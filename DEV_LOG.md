@@ -83,3 +83,4 @@
 - feat(api): add department statistics aggregation
 - feat(ui): visualize department performance comparisons
 - style(ui): adjust chart axis tick formatting
+- feat(api): implement bulk student enrollment endpoint
