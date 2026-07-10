@@ -88,3 +88,4 @@
 - fix(api): validate CSV headers before processing
 - refactor(api): extract CSV parsing to utility service
 - chore(db): expand mock seed data with realistic edge cases
+- feat(ui): implement dark mode persistent toggle
