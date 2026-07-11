@@ -91,3 +91,4 @@
 - feat(ui): implement dark mode persistent toggle
 - fix(ui): prevent flash of unstyled content on load
 - docs: refine README.md deployment instructions
+- feat(api): build alumni directory endpoints
