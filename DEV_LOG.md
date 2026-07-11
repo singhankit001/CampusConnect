@@ -99,3 +99,4 @@
 - refactor(ui): modularize complex animation variants
 - perf(ui): lazy load heavy chart components
 - feat(api): implement feedback collection endpoints
+- feat(ui): build anonymous feedback submission modal
