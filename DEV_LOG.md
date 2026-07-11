@@ -94,3 +94,4 @@
 - feat(api): build alumni directory endpoints
 - feat(ui): add alumni networking board
 - fix(api): secure alumni contact info against unauthorized access
+- style(ui): redesign landing page hero section
