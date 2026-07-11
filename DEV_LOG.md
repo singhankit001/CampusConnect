@@ -93,3 +93,4 @@
 - docs: refine README.md deployment instructions
 - feat(api): build alumni directory endpoints
 - feat(ui): add alumni networking board
+- fix(api): secure alumni contact info against unauthorized access
