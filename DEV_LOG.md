@@ -97,3 +97,4 @@
 - style(ui): redesign landing page hero section
 - feat(ui): add scroll-triggered reveal animations
 - refactor(ui): modularize complex animation variants
+- perf(ui): lazy load heavy chart components
