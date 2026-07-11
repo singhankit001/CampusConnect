@@ -98,3 +98,4 @@
 - feat(ui): add scroll-triggered reveal animations
 - refactor(ui): modularize complex animation variants
 - perf(ui): lazy load heavy chart components
+- feat(api): implement feedback collection endpoints
