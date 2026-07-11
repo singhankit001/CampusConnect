@@ -96,3 +96,4 @@
 - fix(api): secure alumni contact info against unauthorized access
 - style(ui): redesign landing page hero section
 - feat(ui): add scroll-triggered reveal animations
+- refactor(ui): modularize complex animation variants
