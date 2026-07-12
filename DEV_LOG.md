@@ -102,3 +102,4 @@
 - feat(ui): build anonymous feedback submission modal
 - fix(db): handle long text truncation in feedback table
 - chore: configure husky pre-commit hooks
+- feat(api): add automated transcript generation
