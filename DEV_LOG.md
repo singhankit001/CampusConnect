@@ -108,3 +108,4 @@
 - refactor(api): optimize transcript data assembly
 - style(ui): enhance print media queries for reports
 - docs: update DATABASE.md with detailed schema notes
+- feat(api): build faculty course assignment endpoints
