@@ -105,3 +105,4 @@
 - feat(api): add automated transcript generation
 - feat(ui): add PDF download button for transcripts
 - fix(ui): resolve font loading issues in PDF renderer
+- refactor(api): optimize transcript data assembly
