@@ -110,3 +110,4 @@
 - docs: update DATABASE.md with detailed schema notes
 - feat(api): build faculty course assignment endpoints
 - feat(ui): add course roster management for faculty
+- fix(api): prevent faculty from grading unassigned students
