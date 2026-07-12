@@ -109,3 +109,4 @@
 - style(ui): enhance print media queries for reports
 - docs: update DATABASE.md with detailed schema notes
 - feat(api): build faculty course assignment endpoints
+- feat(ui): add course roster management for faculty
