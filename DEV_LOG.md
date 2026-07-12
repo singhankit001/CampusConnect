@@ -107,3 +107,4 @@
 - fix(ui): resolve font loading issues in PDF renderer
 - refactor(api): optimize transcript data assembly
 - style(ui): enhance print media queries for reports
+- docs: update DATABASE.md with detailed schema notes
