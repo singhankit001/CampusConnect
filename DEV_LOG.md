@@ -104,3 +104,4 @@
 - chore: configure husky pre-commit hooks
 - feat(api): add automated transcript generation
 - feat(ui): add PDF download button for transcripts
+- fix(ui): resolve font loading issues in PDF renderer
