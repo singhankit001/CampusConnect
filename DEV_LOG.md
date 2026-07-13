@@ -119,3 +119,4 @@
 - style(ui): add empty state illustrations for dashboards
 - perf(db): add partial indexes for active enrollments
 - feat(ui): implement global search shortcut (Cmd+K)
+- feat(api): build fuzzy search endpoint across entities
