@@ -112,3 +112,4 @@
 - feat(ui): add course roster management for faculty
 - fix(api): prevent faculty from grading unassigned students
 - chore: add comprehensive error messages dictionary
+- feat(api): implement student attendance tracking
