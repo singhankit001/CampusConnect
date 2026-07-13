@@ -116,3 +116,4 @@
 - feat(ui): build daily attendance marking interface
 - fix(ui): prevent marking attendance on weekends
 - refactor(api): move business logic out of controllers
+- style(ui): add empty state illustrations for dashboards
