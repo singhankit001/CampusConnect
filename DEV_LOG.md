@@ -113,3 +113,4 @@
 - fix(api): prevent faculty from grading unassigned students
 - chore: add comprehensive error messages dictionary
 - feat(api): implement student attendance tracking
+- feat(ui): build daily attendance marking interface
