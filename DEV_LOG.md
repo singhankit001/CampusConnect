@@ -120,3 +120,4 @@
 - perf(db): add partial indexes for active enrollments
 - feat(ui): implement global search shortcut (Cmd+K)
 - feat(api): build fuzzy search endpoint across entities
+- fix(ui): resolve keyboard navigation bugs in command menu
