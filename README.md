@@ -18,17 +18,7 @@
 
 <br />
 
-## 📸 Platform Interface
 
-> *Note: Replace these placeholders with actual screenshots of your running application.*
-
-| Dashboard Overview | Placement Analytics |
-| :---: | :---: |
-| ![Dashboard Overview](/docs/assets/dashboard_placeholder.png) | ![Placement Analytics](/docs/assets/analytics_placeholder.png) |
-| **Glassmorphic Authentication** | **Student Ecosystem** |
-| ![Auth View](/docs/assets/auth_placeholder.png) | ![Ecosystem](/docs/assets/ecosystem_placeholder.png) |
-
----
 
 ## 📖 Project Overview
 
