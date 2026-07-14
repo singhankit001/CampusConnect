@@ -1,8 +1,8 @@
 import { Router, Response } from 'express';
 import { PrismaClient, UserRole, EnrollmentStatus, AttendanceStatus, SubmissionStatus, ClubRole, RegistrationStatus, ApplicationStatus, FeedbackCategory, NotificationType, AnnouncementTarget } from '@prisma/client';
 import * as bcrypt from 'bcryptjs';
-import { AuthenticatedRequest } from '../types';
-import { authenticateToken, requireRole } from '../middleware/auth';
+import { AuthenticatedRequest } from '../../types';
+import { authenticateToken, requireRole } from '../../middleware/auth';
 
 const router = Router();
 
@@ -89,7 +89,5 @@ router.delete('/feedback/:id', requireRole([UserRole.ADMIN]), async (req: Authen
     return res.status(500).json({ error: err.message });
   }
 });
-
-export default router;
 
 export default router;

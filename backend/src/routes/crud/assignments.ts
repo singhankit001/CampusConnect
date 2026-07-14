@@ -1,8 +1,8 @@
 import { Router, Response } from 'express';
 import { PrismaClient, UserRole, EnrollmentStatus, AttendanceStatus, SubmissionStatus, ClubRole, RegistrationStatus, ApplicationStatus, FeedbackCategory, NotificationType, AnnouncementTarget } from '@prisma/client';
 import * as bcrypt from 'bcryptjs';
-import { AuthenticatedRequest } from '../types';
-import { authenticateToken, requireRole } from '../middleware/auth';
+import { AuthenticatedRequest } from '../../types';
+import { authenticateToken, requireRole } from '../../middleware/auth';
 
 const router = Router();
 
