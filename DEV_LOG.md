@@ -125,3 +125,4 @@
 - docs: compile final project report
 - fix: resolve all minor strict mode typescript errors
 - refactor: final code cleanup and formatting
+- feat: prepare release candidate v1.0
