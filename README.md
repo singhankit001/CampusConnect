@@ -294,7 +294,6 @@ CampusConnect is not a standard "To-Do List" or basic CRUD application. It was e
 
 **Ankit Singh**
 - GitHub: [@singhankit001](https://github.com/singhankit001)
-- Portfolio / LinkedIn: *[Insert Link]*
 
 *Always open to discussing software architecture, database design, and frontend engineering!*
 
