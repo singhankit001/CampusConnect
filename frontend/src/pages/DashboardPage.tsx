@@ -68,7 +68,7 @@ export const DashboardPage: React.FC = () => {
     case 'STUDENT': return <StudentDashboard studentId={user.profileId!} />;
     default:
       return (
-        <Card className="p-8 text-center text-slate-500">
+        <Card className="p-8 text-center text-slate-500 dark:text-slate-400">
           Access Denied. Unknown user role.
         </Card>
       );
@@ -103,8 +103,8 @@ const AdminDashboard: React.FC = () => {
   return (
     <motion.div variants={containerVariants} initial="hidden" animate="visible" className="space-y-6">
       <motion.div variants={itemVariants}>
-        <h1 className="text-4xl font-display font-extrabold text-slate-900 tracking-tight drop-shadow-sm">Admin Operations Console</h1>
-        <p className="text-sm text-slate-500 mt-2">Real-time university diagnostics, active enrollments, and placement rate dashboards</p>
+        <h1 className="text-4xl font-display font-extrabold text-slate-900 dark:text-white tracking-tight drop-shadow-sm">Admin Operations Console</h1>
+        <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">Real-time university diagnostics, active enrollments, and placement rate dashboards</p>
       </motion.div>
 
       {/* Grid of stats */}
@@ -121,8 +121,8 @@ const AdminDashboard: React.FC = () => {
               <stat.icon className="h-5 w-5" />
             </div>
             <div>
-              <p className="text-[11px] font-bold text-slate-500 uppercase tracking-widest">{stat.label}</p>
-              <p className="text-2xl font-black text-slate-900 mt-1 drop-shadow-sm">{stat.value}</p>
+              <p className="text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest">{stat.label}</p>
+              <p className="text-2xl font-black text-slate-900 dark:text-white mt-1 drop-shadow-sm">{stat.value}</p>
             </div>
           </Card>
         ))}
@@ -132,8 +132,8 @@ const AdminDashboard: React.FC = () => {
         <motion.div variants={itemVariants} className="lg:col-span-1">
           <Card glass className="h-full flex flex-col justify-between">
             <CardHeader className="pb-0">
-              <CardTitle className="text-sm text-slate-900 uppercase tracking-wider font-bold">Placement Success Rate</CardTitle>
-              <p className="text-xs text-slate-500 mt-1">Offer conversion percentage based on application data</p>
+              <CardTitle className="text-sm text-slate-900 dark:text-white uppercase tracking-wider font-bold">Placement Success Rate</CardTitle>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">Offer conversion percentage based on application data</p>
             </CardHeader>
             <CardContent className="flex flex-col items-center justify-center pt-6 min-h-[250px]">
               <div className="relative flex items-center justify-center">
@@ -152,12 +152,12 @@ const AdminDashboard: React.FC = () => {
                   </PieChart>
                 </ResponsiveContainer>
                 <div className="absolute text-center">
-                  <span className="text-3xl font-black text-slate-900 drop-shadow-sm">{data.placementRate}%</span>
-                  <span className="text-[11px] text-slate-500 block font-bold uppercase mt-1">Hired Rate</span>
+                  <span className="text-3xl font-black text-slate-900 dark:text-white drop-shadow-sm">{data.placementRate}%</span>
+                  <span className="text-[11px] text-slate-500 dark:text-slate-400 block font-bold uppercase mt-1">Hired Rate</span>
                 </div>
               </div>
-              <div className="mt-4 text-center bg-slate-100/50 p-3 rounded-xl w-full border border-slate-200">
-                <p className="text-xs text-slate-600 font-medium">
+              <div className="mt-4 text-center bg-slate-100/50 dark:bg-slate-800/50 p-3 rounded-xl w-full border border-slate-200 dark:border-slate-700">
+                <p className="text-xs text-slate-700 dark:text-slate-300 font-medium">
                   Overall placement rate across all engineering departments.
                 </p>
               </div>
@@ -168,8 +168,8 @@ const AdminDashboard: React.FC = () => {
         <motion.div variants={itemVariants} className="lg:col-span-2">
           <Card glass className="h-full">
             <CardHeader>
-              <CardTitle className="text-sm text-slate-900 uppercase tracking-wider font-bold">Department Hiring Stats</CardTitle>
-              <p className="text-xs text-slate-500 font-medium mt-1">Total applications vs successful offers</p>
+              <CardTitle className="text-sm text-slate-900 dark:text-white uppercase tracking-wider font-bold">Department Hiring Stats</CardTitle>
+              <p className="text-xs text-slate-500 dark:text-slate-400 font-medium mt-1">Total applications vs successful offers</p>
             </CardHeader>
             <CardContent className="h-64 min-h-[250px]">
               <ResponsiveContainer width="100%" height="100%">
@@ -199,13 +199,13 @@ const AdminDashboard: React.FC = () => {
               <Star className="h-6 w-6 fill-current" />
             </div>
             <div>
-              <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider">Campus Feedback Score</h3>
-              <p className="text-xs text-slate-500 font-medium mt-1">Average university infrastructure rating</p>
+              <h3 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">Campus Feedback Score</h3>
+              <p className="text-xs text-slate-500 dark:text-slate-400 font-medium mt-1">Average university infrastructure rating</p>
             </div>
           </div>
           <div className="text-right">
-            <p className="text-3xl font-black text-slate-900 drop-shadow-sm">{data.feedback.averageRating} / 5.0</p>
-            <p className="text-[11px] text-slate-500 font-bold uppercase mt-1">{data.feedback.totalFeedback} Surveys Submitted</p>
+            <p className="text-3xl font-black text-slate-900 dark:text-white drop-shadow-sm">{data.feedback.averageRating} / 5.0</p>
+            <p className="text-[11px] text-slate-500 dark:text-slate-400 font-bold uppercase mt-1">{data.feedback.totalFeedback} Surveys Submitted</p>
           </div>
         </Card>
       </motion.div>
@@ -328,7 +328,7 @@ const StudentDashboard: React.FC<{ studentId: string }> = ({ studentId }) => {
              )}
             <div className="flex flex-col items-center justify-center relative z-10 w-full h-full">
               <div className="flex items-center gap-2 mb-2 w-full justify-center">
-                <FileCheck className="h-4 w-4 text-slate-500" />
+                <FileCheck className="h-4 w-4 text-slate-500 dark:text-slate-400" />
                 <h3 className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Live Attendance</h3>
               </div>
               
@@ -368,7 +368,7 @@ const StudentDashboard: React.FC<{ studentId: string }> = ({ studentId }) => {
             
             <div className="flex flex-col md:flex-row gap-4 overflow-x-auto pb-2 custom-scrollbar">
               {data.applications.length === 0 ? (
-                <div className="w-full p-8 text-center text-sm text-slate-500 bg-slate-50 dark:bg-slate-900/40 rounded-xl border border-slate-200 dark:border-white/5">
+                <div className="w-full p-8 text-center text-sm text-slate-500 dark:text-slate-400 bg-slate-50 dark:bg-slate-900/40 rounded-xl border border-slate-200 dark:border-white/5">
                   No active internship applications yet. Explore the Placement Portal.
                 </div>
               ) : (
@@ -388,7 +388,7 @@ const StudentDashboard: React.FC<{ studentId: string }> = ({ studentId }) => {
                     </div>
                     <div>
                       <h4 className="text-sm font-bold text-slate-900 dark:text-white line-clamp-1">{app.internship.title}</h4>
-                      <p className="text-[11px] font-medium text-slate-500 mt-1">{app.internship.company.name}</p>
+                      <p className="text-[11px] font-medium text-slate-500 dark:text-slate-400 mt-1">{app.internship.company.name}</p>
                     </div>
                   </div>
                 ))
@@ -410,7 +410,7 @@ const StudentDashboard: React.FC<{ studentId: string }> = ({ studentId }) => {
                 <div key={evt.id} className="p-3 bg-slate-50/80 dark:bg-slate-900/60 rounded-xl border border-slate-200/50 dark:border-white/5 hover:-translate-y-0.5 hover:shadow-md transition-all duration-300">
                   <h4 className="text-xs font-bold text-slate-900 dark:text-white mb-0.5">{evt.title}</h4>
                   <div className="flex items-center justify-between">
-                    <p className="text-[10px] text-slate-500 font-medium">{evt.club} • {evt.date}</p>
+                    <p className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">{evt.club} • {evt.date}</p>
                     <button className="text-[9px] font-bold bg-brand-500/10 text-brand-600 dark:text-brand-400 px-2 py-1 rounded hover:bg-brand-500 hover:text-white transition-colors">
                       Quick Register
                     </button>
@@ -431,8 +431,8 @@ const StudentDashboard: React.FC<{ studentId: string }> = ({ studentId }) => {
                 <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
               </div>
               <div className="flex items-center gap-2">
-                <Terminal className="h-3 w-3 text-slate-500" />
-                <span className="text-[10px] font-mono text-slate-500 font-semibold tracking-wider">Live SQL Workbench</span>
+                <Terminal className="h-3 w-3 text-slate-500 dark:text-slate-400" />
+                <span className="text-[10px] font-mono text-slate-500 dark:text-slate-400 font-semibold tracking-wider">Live SQL Workbench</span>
               </div>
               <div className="w-10"></div> {/* Spacer for balance */}
             </div>
@@ -581,7 +581,7 @@ const FacultyDashboard: React.FC<{ profileId: string }> = ({ profileId }) => {
             <CardContent className="pt-4">
               <div className="divide-y divide-slate-100 dark:divide-white/5">
                 {data.recentSubmissions.length === 0 ? (
-                  <div className="p-8 text-center text-sm text-slate-500">
+                  <div className="p-8 text-center text-sm text-slate-500 dark:text-slate-400">
                     No recent submissions.
                   </div>
                 ) : (
@@ -591,7 +591,7 @@ const FacultyDashboard: React.FC<{ profileId: string }> = ({ profileId }) => {
                         <p className="text-xs font-semibold text-slate-900 dark:text-slate-100 break-words line-clamp-2">
                           {sub.student.user.firstName} {sub.student.user.lastName}
                         </p>
-                        <p className="text-[10px] text-slate-500 font-bold uppercase mt-0.5 break-words line-clamp-2">
+                        <p className="text-[10px] text-slate-500 dark:text-slate-400 font-bold uppercase mt-0.5 break-words line-clamp-2">
                           {sub.assignment.course.code}: {sub.assignment.title}
                         </p>
                       </div>
@@ -680,7 +680,7 @@ const RecruiterDashboard: React.FC<{ companyId: string }> = ({ companyId }) => {
             </CardHeader>
             <CardContent className="h-60 min-h-[250px] flex flex-col items-center justify-center">
               {chartFunnelData.length === 0 ? (
-                <div className="text-slate-500 text-sm">No data available</div>
+                <div className="text-slate-500 dark:text-slate-400 text-sm">No data available</div>
               ) : (
                 <ResponsiveContainer width="100%" height="100%">
                   <PieChart>
@@ -706,7 +706,7 @@ const RecruiterDashboard: React.FC<{ companyId: string }> = ({ companyId }) => {
             <CardContent className="pt-4">
               <div className="divide-y divide-slate-100 dark:divide-white/5">
                 {data.recentApplicants.length === 0 ? (
-                  <div className="p-8 text-center text-sm text-slate-500">
+                  <div className="p-8 text-center text-sm text-slate-500 dark:text-slate-400">
                     No active applications.
                   </div>
                 ) : (
@@ -716,7 +716,7 @@ const RecruiterDashboard: React.FC<{ companyId: string }> = ({ companyId }) => {
                         <p className="text-xs font-semibold text-slate-900 dark:text-slate-100 break-words line-clamp-2">
                           {app.student.user.firstName} {app.student.user.lastName}
                         </p>
-                        <p className="text-[10px] text-slate-500 font-medium mt-0.5 break-words line-clamp-2">
+                        <p className="text-[10px] text-slate-500 dark:text-slate-400 font-medium mt-0.5 break-words line-clamp-2">
                           Applied: {app.internship.title} (GPA: {app.student.cgpa})
                         </p>
                       </div>

@@ -117,7 +117,7 @@ export const LoginPage: React.FC = () => {
         <motion.div variants={itemVariants} className="mb-8">
           <div className="flex items-center justify-center gap-2 mb-4">
             <div className="h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent flex-1"></div>
-            <p className="text-[10px] font-bold text-slate-500 tracking-[0.2em] uppercase">
+            <p className="text-[10px] font-bold text-slate-500 dark:text-slate-400 tracking-[0.2em] uppercase">
               Fast-Track Demo Access
             </p>
             <div className="h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent flex-1"></div>
@@ -171,7 +171,7 @@ export const LoginPage: React.FC = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="you@campusconnect.edu"
-                className="pl-12 h-14 bg-slate-100 dark:bg-black/20 border-slate-200 dark:border-white/10 text-slate-900 dark:text-white rounded-2xl focus:border-brand-500/50 focus:ring-brand-500/20 transition-all text-base placeholder:text-slate-400 dark:placeholder:text-slate-600"
+                className="pl-12 h-14 bg-slate-100 dark:bg-slate-800/50 dark:bg-black/20 border-slate-200 dark:border-white/10 text-slate-900 dark:text-white rounded-2xl focus:border-brand-500/50 focus:ring-brand-500/20 transition-all text-base placeholder:text-slate-400 dark:placeholder:text-slate-600"
                 required
               />
             </div>
@@ -186,7 +186,7 @@ export const LoginPage: React.FC = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="••••••••"
-                className="pl-12 h-14 bg-slate-100 dark:bg-black/20 border-slate-200 dark:border-white/10 text-slate-900 dark:text-white rounded-2xl focus:border-brand-500/50 focus:ring-brand-500/20 transition-all text-base placeholder:text-slate-400 dark:placeholder:text-slate-600 tracking-[0.2em]"
+                className="pl-12 h-14 bg-slate-100 dark:bg-slate-800/50 dark:bg-black/20 border-slate-200 dark:border-white/10 text-slate-900 dark:text-white rounded-2xl focus:border-brand-500/50 focus:ring-brand-500/20 transition-all text-base placeholder:text-slate-400 dark:placeholder:text-slate-600 tracking-[0.2em]"
                 required
               />
             </div>

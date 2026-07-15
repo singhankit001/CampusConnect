@@ -18,7 +18,7 @@ export const FeeManagementPage: React.FC = () => {
         </div>
         
         <div className="flex gap-3">
-          <button className="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-white bg-slate-900 dark:bg-white dark:text-slate-900 rounded-lg hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors shadow-sm active:scale-95">
+          <button className="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-white bg-slate-900 dark:bg-white dark:text-slate-900 dark:text-white rounded-lg hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors shadow-sm active:scale-95">
             <Plus className="h-4 w-4" />
             New Structure
           </button>
@@ -88,7 +88,7 @@ export const FeeManagementPage: React.FC = () => {
         <CardContent>
           <div className="overflow-x-auto">
             <table className="w-full text-sm text-left text-slate-600 dark:text-slate-300">
-              <thead className="text-xs text-slate-500 uppercase bg-slate-50/50 dark:bg-slate-800/50 border-b border-slate-200 dark:border-slate-700">
+              <thead className="text-xs text-slate-500 dark:text-slate-400 uppercase bg-slate-50/50 dark:bg-slate-800/50 border-b border-slate-200 dark:border-slate-700">
                 <tr>
                   <th className="px-4 py-3">Title</th>
                   <th className="px-4 py-3">Amount</th>
@@ -104,7 +104,7 @@ export const FeeManagementPage: React.FC = () => {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    className="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors"
+                    className="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50 dark:bg-slate-800/50 dark:hover:bg-slate-800/30 transition-colors"
                   >
                     <td className="px-4 py-4 font-medium text-slate-900 dark:text-white">{structure.title}</td>
                     <td className="px-4 py-4 font-display font-semibold">₹{structure.amount.toLocaleString('en-IN')}</td>

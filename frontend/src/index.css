@@ -11,7 +11,13 @@
   }
 }
 
-
+/* Focus Ring Utility — WCAG AA keyboard navigation */
+.focus-ring {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2;
+}
+.dark .focus-ring {
+  @apply focus-visible:ring-offset-slate-900;
+}
 
 /* Premium Noise Texture Background */
 .bg-noise {
@@ -53,21 +59,21 @@
   @apply bg-white/20 backdrop-blur-md border border-white/30 shadow-xl;
 }
 .dark .glass-panel {
-  @apply bg-slate-900/40 border-white/10;
+  @apply bg-slate-900/70 border-white/10;
 }
 
 .glass-card {
   @apply bg-white/20 backdrop-blur-md border border-white/30 shadow-xl transition-all duration-300 ease-out;
 }
 .dark .glass-card {
-  @apply bg-slate-900/40 border-white/10;
+  @apply bg-slate-900/70 border-white/10;
 }
 
 .glass-card:hover {
   @apply -translate-y-[2px] bg-white/30 border-white/40 shadow-[0_12px_40px_0_rgba(0,0,0,0.08),0_0_20px_rgba(99,102,241,0.1)];
 }
 .dark .glass-card:hover {
-  @apply bg-slate-800/50 border-white/20;
+  @apply bg-slate-800/80 border-white/20;
 }
 
 /* Scrollbar styling */

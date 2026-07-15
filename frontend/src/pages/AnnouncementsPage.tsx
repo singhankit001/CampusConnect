@@ -107,7 +107,7 @@ export const AnnouncementsPage: React.FC = () => {
         </div>
       ) : announcements.length === 0 ? (
         <div className="p-16 text-center space-y-3 border-2 border-dashed border-slate-200 dark:border-slate-800 rounded-2xl">
-          <BellRing className="h-10 w-10 text-slate-300 dark:text-slate-600 mx-auto" />
+          <BellRing className="h-10 w-10 text-slate-300 dark:text-slate-600 dark:text-slate-400 mx-auto" />
           <p className="text-sm text-slate-400 font-medium">No active bulletins posted.</p>
         </div>
       ) : (
@@ -118,7 +118,7 @@ export const AnnouncementsPage: React.FC = () => {
                 <div className="flex justify-between items-start gap-4">
                   <div className="space-y-2 flex-1">
                     <div className="flex items-center gap-2 flex-wrap">
-                      <span className="text-[11px] font-bold text-slate-500 flex items-center gap-1.5">
+                      <span className="text-[11px] font-bold text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
                         <BellRing className="h-3.5 w-3.5 text-brand-500" />
                         {new Date(ann.createdAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}
                       </span>
