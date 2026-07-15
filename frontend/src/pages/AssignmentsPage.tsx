@@ -116,7 +116,7 @@ export const AssignmentsPage: React.FC = () => {
       )}
 
       <Card glass className="p-4 flex items-center justify-between gap-4">
-        <span className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider whitespace-nowrap">Select Course</span>
+        <span className="text-xs font-bold text-slate-500 uppercase tracking-wider whitespace-nowrap">Select Course</span>
         <select value={selectedCourseId} onChange={(e) => setSelectedCourseId(e.target.value)}
           className="flex-1 px-3 py-2.5 rounded-xl text-sm bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 focus:outline-none">
           {courses.map(c => <option key={c.id} value={c.id}>{c.code} – {c.title}</option>)}
@@ -129,7 +129,7 @@ export const AssignmentsPage: React.FC = () => {
         </div>
       ) : assignments.length === 0 ? (
         <div className="p-16 text-center space-y-3 border-2 border-dashed border-slate-200 dark:border-slate-800 rounded-2xl">
-          <BookOpen className="h-10 w-10 text-slate-300 dark:text-slate-600 dark:text-slate-400 mx-auto" />
+          <BookOpen className="h-10 w-10 text-slate-300 dark:text-slate-600 mx-auto" />
           <p className="text-sm text-slate-400 font-medium">No assignments posted for this course.</p>
         </div>
       ) : (
@@ -143,7 +143,7 @@ export const AssignmentsPage: React.FC = () => {
                     <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">{asg.description}</p>
                     <div className="flex flex-wrap gap-3 pt-1">
                       <Badge variant="secondary">Max: {asg.maxMarks} marks</Badge>
-                      <span className="inline-flex items-center gap-1 text-[11px] text-slate-500 dark:text-slate-400 font-semibold">
+                      <span className="inline-flex items-center gap-1 text-[11px] text-slate-500 font-semibold">
                         <Clock className="h-3.5 w-3.5 text-amber-500" />
                         Due: {new Date(asg.dueDate).toLocaleString()}
                       </span>

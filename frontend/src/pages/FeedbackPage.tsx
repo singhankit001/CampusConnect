@@ -115,18 +115,18 @@ export const FeedbackPage: React.FC = () => {
       {!loading && feedbacks.length > 0 && (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <Card glass className="p-5">
-            <p className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest">Total Surveys</p>
+            <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Total Surveys</p>
             <p className="text-2xl font-black text-slate-900 dark:text-white mt-1">{feedbacks.length}</p>
           </Card>
           <Card glass className="p-5">
-            <p className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest">Average Rating</p>
+            <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Average Rating</p>
             <div className="flex items-center gap-2 mt-1">
               <p className="text-2xl font-black text-amber-500">{avgRating.toFixed(1)}</p>
               {renderStars(Math.round(avgRating))}
             </div>
           </Card>
           <Card glass className="p-5">
-            <p className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-2">By Category</p>
+            <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2">By Category</p>
             <div className="flex flex-wrap gap-1.5">
               {(['ACADEMIC', 'FACILITIES', 'FACULTY', 'GENERAL'] as const).map(cat => {
                 const count = feedbacks.filter(f => f.category === cat).length;
@@ -143,7 +143,7 @@ export const FeedbackPage: React.FC = () => {
         </div>
       ) : feedbacks.length === 0 ? (
         <div className="p-16 text-center space-y-3 border-2 border-dashed border-slate-200 dark:border-slate-800 rounded-2xl">
-          <MessageSquareHeart className="h-10 w-10 mx-auto text-slate-300 dark:text-slate-600 dark:text-slate-400" />
+          <MessageSquareHeart className="h-10 w-10 mx-auto text-slate-300 dark:text-slate-600" />
           <p className="text-sm text-slate-400 font-medium">No feedback submissions yet.</p>
         </div>
       ) : (
@@ -161,7 +161,7 @@ export const FeedbackPage: React.FC = () => {
                       </span>
                     </div>
                     <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">{fb.comment}</p>
-                    <div className="flex items-center gap-4 text-[11px] text-slate-500 dark:text-slate-400 font-semibold pt-1">
+                    <div className="flex items-center gap-4 text-[11px] text-slate-500 font-semibold pt-1">
                       <span>Course: <span className="text-slate-700 dark:text-slate-300">{fb.course?.name || 'N/A'}</span></span>
                       <span>By: <span className="text-slate-700 dark:text-slate-300">{fb.student?.user?.firstName} {fb.student?.user?.lastName}</span></span>
                     </div>
@@ -210,7 +210,7 @@ export const FeedbackPage: React.FC = () => {
                         <Star className={`h-7 w-7 transition-colors ${i < rating ? 'fill-amber-400 text-amber-400' : 'text-slate-300 dark:text-slate-700'}`} />
                       </button>
                     ))}
-                    <span className="ml-2 text-sm font-bold text-slate-500 dark:text-slate-400">{rating} / 5</span>
+                    <span className="ml-2 text-sm font-bold text-slate-500">{rating} / 5</span>
                   </div>
                 </div>
                 <div>

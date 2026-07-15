@@ -118,7 +118,7 @@ export const ManageFaculty: React.FC = () => {
         </div>
       ) : faculties.length === 0 ? (
         <div className="p-16 text-center space-y-3 border-2 border-dashed border-slate-200 dark:border-slate-800 rounded-2xl">
-          <GraduationCap className="h-10 w-10 text-slate-300 dark:text-slate-600 dark:text-slate-400 mx-auto" />
+          <GraduationCap className="h-10 w-10 text-slate-300 dark:text-slate-600 mx-auto" />
           <p className="text-sm text-slate-400 font-medium">No faculty matching filters found.</p>
         </div>
       ) : (
@@ -137,12 +137,12 @@ export const ManageFaculty: React.FC = () => {
               </thead>
               <tbody className="divide-y divide-slate-100 dark:divide-white/5">
                 {faculties.map(fac => (
-                  <tr key={fac.id} className="hover:bg-slate-50 dark:bg-slate-800 dark:hover:bg-white/5 transition-colors group">
+                  <tr key={fac.id} className="hover:bg-slate-50 dark:hover:bg-white/5 transition-colors group">
                     <td className="px-5 py-4 font-semibold text-slate-800 dark:text-slate-200">{fac.user.firstName} {fac.user.lastName}</td>
-                    <td className="px-5 py-4 font-mono text-slate-500 dark:text-slate-400">{fac.user.email}</td>
+                    <td className="px-5 py-4 font-mono text-slate-500">{fac.user.email}</td>
                     <td className="px-5 py-4 text-brand-600 dark:text-brand-400 font-medium">{fac.designation}</td>
                     <td className="px-5 py-4"><Badge variant="secondary">{fac.department.code}</Badge></td>
-                    <td className="px-5 py-4 text-slate-500 dark:text-slate-400 font-medium">{fac.officeHours || 'N/A'}</td>
+                    <td className="px-5 py-4 text-slate-500 font-medium">{fac.officeHours || 'N/A'}</td>
                     <td className="px-5 py-4 text-center">
                       <Button size="icon" variant="ghost" onClick={() => handleDelete(fac.id)} className="opacity-0 group-hover:opacity-100 text-rose-500 hover:bg-rose-500/10 transition-all">
                         <Trash2 className="h-4 w-4" />

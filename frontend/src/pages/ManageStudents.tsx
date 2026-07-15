@@ -119,7 +119,7 @@ export const ManageStudents: React.FC = () => {
         </div>
       ) : students.length === 0 ? (
         <div className="p-16 text-center space-y-3 border-2 border-dashed border-slate-200 dark:border-slate-800 rounded-2xl">
-          <Users className="h-10 w-10 text-slate-300 dark:text-slate-600 dark:text-slate-400 mx-auto" />
+          <Users className="h-10 w-10 text-slate-300 dark:text-slate-600 mx-auto" />
           <p className="text-sm text-slate-400 font-medium">No students matching search criteria.</p>
         </div>
       ) : (
@@ -139,12 +139,12 @@ export const ManageStudents: React.FC = () => {
               </thead>
               <tbody className="divide-y divide-slate-100 dark:divide-white/5">
                 {students.map(student => (
-                  <tr key={student.id} className="hover:bg-slate-50 dark:bg-slate-800 dark:hover:bg-white/5 transition-colors group">
+                  <tr key={student.id} className="hover:bg-slate-50 dark:hover:bg-white/5 transition-colors group">
                     <td className="px-5 py-4 font-mono font-bold text-brand-600 dark:text-brand-400 text-[11px]">{student.rollNo}</td>
                     <td className="px-5 py-4 font-semibold text-slate-800 dark:text-slate-200">{student.user.firstName} {student.user.lastName}</td>
-                    <td className="px-5 py-4 font-mono text-slate-500 dark:text-slate-400">{student.user.email}</td>
+                    <td className="px-5 py-4 font-mono text-slate-500">{student.user.email}</td>
                     <td className="px-5 py-4"><Badge variant="secondary">{student.department.code}</Badge></td>
-                    <td className="px-5 py-4 text-slate-500 dark:text-slate-400 font-medium">{student.batch}</td>
+                    <td className="px-5 py-4 text-slate-500 font-medium">{student.batch}</td>
                     <td className="px-5 py-4 font-bold text-emerald-500">{student.cgpa.toFixed(2)}</td>
                     <td className="px-5 py-4 text-center">
                       <Button size="icon" variant="ghost" onClick={() => handleDelete(student.id)} className="opacity-0 group-hover:opacity-100 text-rose-500 hover:bg-rose-500/10 transition-all">

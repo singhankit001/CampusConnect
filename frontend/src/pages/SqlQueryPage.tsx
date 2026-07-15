@@ -170,7 +170,7 @@ export const SqlQueryPage: React.FC = () => {
                     </span>
                     <span className="text-[10px] text-slate-400 font-medium">PostgreSQL Dialect</span>
                   </div>
-                  <pre className="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-200 text-xs overflow-x-auto font-mono leading-relaxed border border-slate-200 dark:border-slate-800 shadow-inner">
+                  <pre className="p-4 rounded-xl bg-slate-50 text-slate-800 text-xs overflow-x-auto font-mono leading-relaxed border border-slate-200 shadow-inner">
                     <code>{selectedQuery.sql}</code>
                   </pre>
                 </div>
@@ -208,7 +208,7 @@ export const SqlQueryPage: React.FC = () => {
 
                 {results === null && !loading && !error && (
                   <div className="p-16 text-center space-y-3 border-2 border-dashed border-slate-200 dark:border-slate-800 rounded-xl">
-                    <Database className="h-10 w-10 text-slate-300 dark:text-slate-600 dark:text-slate-400 mx-auto" />
+                    <Database className="h-10 w-10 text-slate-300 dark:text-slate-600 mx-auto" />
                     <p className="text-sm text-slate-450 dark:text-slate-500 font-medium">Click "Execute Query" to fetch live data from the PostgreSQL server.</p>
                   </div>
                 )}
@@ -222,7 +222,7 @@ export const SqlQueryPage: React.FC = () => {
 
                 {results !== null && results.length === 0 && (
                   <div className="p-16 text-center space-y-3 border-2 border-dashed border-slate-200 dark:border-slate-800 rounded-xl">
-                    <Database className="h-10 w-10 text-slate-350 dark:text-slate-600 dark:text-slate-400 mx-auto" />
+                    <Database className="h-10 w-10 text-slate-350 dark:text-slate-600 mx-auto" />
                     <p className="text-sm text-slate-455 dark:text-slate-500 font-medium">Query executed successfully. Result returned 0 rows.</p>
                   </div>
                 )}
@@ -239,7 +239,7 @@ export const SqlQueryPage: React.FC = () => {
                       </thead>
                       <tbody className="divide-y divide-slate-100 dark:divide-white/5">
                         {results.map((row, rIdx) => (
-                          <tr key={rIdx} className="hover:bg-slate-50 dark:bg-slate-800 dark:hover:bg-white/5 transition-colors text-slate-700 dark:text-slate-300">
+                          <tr key={rIdx} className="hover:bg-slate-50 dark:hover:bg-white/5 transition-colors text-slate-700 dark:text-slate-300">
                             {getColumns().map(col => {
                               const val = row[col];
                               return (

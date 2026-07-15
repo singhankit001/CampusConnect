@@ -9,7 +9,7 @@ export function Card({ className, glass = false, ...props }: CardProps) {
   return (
     <div
       className={cn(
-        "rounded-xl bg-white/20 backdrop-blur-md border border-white/30 shadow-xl dark:bg-slate-900/70 dark:border-white/10 text-slate-900 dark:text-slate-50",
+        "rounded-xl bg-white/20 backdrop-blur-md border border-white/30 shadow-xl dark:bg-slate-900/40 dark:border-white/10 text-slate-950 dark:text-slate-50",
         glass && "glass-card",
         className
       )}

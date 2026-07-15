@@ -143,7 +143,7 @@ export const CoursesPage: React.FC = () => {
         </div>
       ) : courses.length === 0 ? (
         <div className="p-16 text-center space-y-3 border-2 border-dashed border-slate-200 dark:border-slate-800 rounded-2xl">
-          <BookOpen className="h-10 w-10 text-slate-300 dark:text-slate-600 dark:text-slate-400 mx-auto" />
+          <BookOpen className="h-10 w-10 text-slate-300 dark:text-slate-600 mx-auto" />
           <p className="text-sm text-slate-400 font-medium">No courses matching filters found.</p>
         </div>
       ) : (
@@ -158,7 +158,7 @@ export const CoursesPage: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="text-sm font-extrabold text-slate-900 dark:text-white leading-relaxed line-clamp-1">{course.title}</h3>
-                    <p className="text-[11px] text-slate-500 dark:text-slate-400 font-medium mt-1">{course.department.name}</p>
+                    <p className="text-[11px] text-slate-500 font-medium mt-1">{course.department.name}</p>
                   </div>
                 </div>
                 <div className="flex items-center justify-between mt-6 pt-4 border-t border-slate-100 dark:border-white/5">

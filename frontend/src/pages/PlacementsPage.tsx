@@ -170,7 +170,7 @@ export const PlacementsPage: React.FC = () => {
         </div>
       ) : internships.length === 0 ? (
         <div className="p-16 text-center space-y-3 border-2 border-dashed border-slate-200 dark:border-slate-800 rounded-2xl">
-          <Briefcase className="h-10 w-10 text-slate-300 dark:text-slate-600 dark:text-slate-400 mx-auto" />
+          <Briefcase className="h-10 w-10 text-slate-300 dark:text-slate-600 mx-auto" />
           <p className="text-sm text-slate-400 font-medium">No internship postings found.</p>
         </div>
       ) : (
@@ -188,7 +188,7 @@ export const PlacementsPage: React.FC = () => {
                     <p className="text-[11px] text-brand-600 dark:text-brand-400 font-bold mt-0.5">{intern.company.name} · {intern.location}</p>
                     <p className="text-xs text-slate-500 dark:text-slate-400 mt-2 line-clamp-2 leading-relaxed">{intern.description}</p>
                   </div>
-                  <div className="flex gap-4 text-[11px] text-slate-500 dark:text-slate-400 font-semibold">
+                  <div className="flex gap-4 text-[11px] text-slate-500 font-semibold">
                     <span>Duration: <span className="text-slate-700 dark:text-slate-300 font-bold">{intern.durationMonths} mo</span></span>
                     <span>Deadline: <span className="text-slate-700 dark:text-slate-300 font-bold">{new Date(intern.deadline).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' })}</span></span>
                   </div>
@@ -281,7 +281,7 @@ export const PlacementsPage: React.FC = () => {
                 ) : activeApps.map(app => (
                   <div key={app.id} className="p-4 bg-slate-50 dark:bg-white/5 rounded-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border border-slate-100 dark:border-white/5">
                     <div className="space-y-1">
-                      <p className="text-sm font-bold text-slate-900 dark:text-white">{app.student.user.firstName} {app.student.user.lastName} <span className="font-normal text-slate-500 dark:text-slate-400">· GPA: {app.student.cgpa}</span></p>
+                      <p className="text-sm font-bold text-slate-900 dark:text-white">{app.student.user.firstName} {app.student.user.lastName} <span className="font-normal text-slate-500">· GPA: {app.student.cgpa}</span></p>
                       <p className="text-[11px] text-slate-400 font-medium">Roll: {app.student.rollNo} · Batch: {app.student.batch}</p>
                       <a href={app.resumeUrl} target="_blank" rel="noreferrer" className="text-[11px] text-brand-500 font-bold hover:underline inline-flex items-center gap-0.5 mt-1">
                         Open Resume <ExternalLink className="h-3 w-3" />

@@ -113,7 +113,7 @@ export const EventsPage: React.FC = () => {
         </div>
       ) : events.length === 0 ? (
         <div className="p-16 text-center space-y-3 border-2 border-dashed border-slate-200 dark:border-slate-800 rounded-2xl">
-          <Calendar className="h-10 w-10 text-slate-300 dark:text-slate-600 dark:text-slate-400 mx-auto" />
+          <Calendar className="h-10 w-10 text-slate-300 dark:text-slate-600 mx-auto" />
           <p className="text-sm text-slate-400 font-medium">No scheduled events found.</p>
         </div>
       ) : (
@@ -123,7 +123,7 @@ export const EventsPage: React.FC = () => {
               <Card glass className="h-full flex flex-col justify-between p-6">
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
-                    <span className="text-[11px] font-bold text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+                    <span className="text-[11px] font-bold text-slate-500 flex items-center gap-1.5">
                       <Calendar className="h-3.5 w-3.5 text-brand-500" />
                       {new Date(ev.date).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}
                     </span>
@@ -134,11 +134,11 @@ export const EventsPage: React.FC = () => {
                     <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mt-1 line-clamp-2">{ev.description}</p>
                   </div>
                   <div className="space-y-1.5">
-                    <div className="flex items-center gap-1.5 text-[11px] text-slate-500 dark:text-slate-400 font-semibold">
+                    <div className="flex items-center gap-1.5 text-[11px] text-slate-500 font-semibold">
                       <MapPin className="h-3.5 w-3.5 text-slate-400" />
                       {ev.location} · {ev.time}
                     </div>
-                    <div className="flex items-center gap-1.5 text-[11px] text-slate-500 dark:text-slate-400 font-semibold">
+                    <div className="flex items-center gap-1.5 text-[11px] text-slate-500 font-semibold">
                       <Users className="h-3.5 w-3.5 text-slate-400" />
                       {ev.capacity} Seats Capacity
                     </div>
